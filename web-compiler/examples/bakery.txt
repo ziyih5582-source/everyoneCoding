@@ -1,0 +1,38 @@
+PAGE "小明的烘焙店"
+FONT 微软雅黑, 15px
+COLOR background: #fff8f0
+
+-- 导航栏
+NAV (bg:#5a3e2b, color:white):
+  LOGO bread.png
+  NAVLINK "首页"  link:index.html
+  NAVLINK "菜单"    link:menu.html
+  NAVLINK "联系"   link:contact.html
+
+-- 大图横幅
+IMAGE banner.jpg (width:100%, height:300px)
+
+SPACE 30px
+ALIGN center
+TITLE "每天现烤，用心做给你吃"
+TEXT "北京市朝阳区xx街道10号" (color:gray)
+SPACE 20px
+
+-- 商品卡片
+CARDS (columns:3, gap:20px):
+  CARD:
+    IMAGE cake1.jpg
+    TITLE "草莓蛋糕"
+    TEXT "¥68" (bold, color:red)
+  CARD:
+    IMAGE bread1.jpg
+    TITLE "法式长棍"
+    TEXT "¥22" (bold, color:red)
+  CARD:
+    IMAGE cookie1.jpg
+    TITLE "曲奇饼干"
+    TEXT "¥38" (bold, color:red)
+
+SPACE 40px
+ALIGN center
+BUTTON "查看全部菜单" (bg:#5a3e2b, color:white, round) link:menu.html

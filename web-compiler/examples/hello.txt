@@ -1,0 +1,10 @@
+PAGE "我的第一个网页"
+COLOR background: #f0f4f8
+
+TITLE "你好，世界！"
+TEXT "这是我用 AI 编译器创建的第一个网页。不需要学任何编程语言，只需要写几句话，AI 就能帮我生成网页。"
+BUTTON "点击试试"
+LINE
+TITLE "太简单了"
+TEXT "不满意？改一下这个 .txt 文件，重新运行编译器就行。"
+TEXT "We will definitely change the world!"

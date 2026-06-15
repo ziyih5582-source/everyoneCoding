@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# AI Compiler - 编译生成的网页（源码是 .txt）
+*.html
+
+# API Key 缓存（安全网，正常情况下在 ~/.web-compiler-key）
+.web-compiler-key
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

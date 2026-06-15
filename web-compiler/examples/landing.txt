@@ -1,0 +1,38 @@
+PAGE "张三的个人主页"
+COLOR background: #ffffff
+FONT 微软雅黑, 16px
+
+ALIGN center
+TITLE "张三"
+TEXT "一个热爱生活的人" (color:gray)
+LINE
+
+-- 个人介绍
+TEXT "你好！我是张三，欢迎来到我的个人主页。我喜欢旅行、摄影和阅读。"
+
+BOX (width:600px, bg:#f9f9f9, padding:20px):
+  TITLE "关于我"
+  TEXT "我是一名设计师，擅长把复杂的想法变成简单好用的产品。平时喜欢用相机记录生活中的美好瞬间。"
+  TITLE "联系方式"
+  TEXT "邮箱：zhangsan@example.com"
+
+LINE
+ALIGN center
+TITLE "我的技能"
+LIST (bullet:dot):
+  "用户界面设计"
+  "摄影"
+  "视频剪辑"
+  "写作"
+
+LINE
+ALIGN center
+TITLE "关注我"
+TEXT ""
+BUTTON "GitHub" link:https://github.com (bg:#333, color:white, round)
+SPACE 10px
+BUTTON "微博" link:https://weibo.com (bg:#e6162d, color:white, round)
+
+SPACE 30px
+LINE
+TEXT "© 2026 张三. 用 AI Web Compiler 创建." (color:gray)
