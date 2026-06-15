@@ -3,10 +3,12 @@ __pycache__/
 *.pyc
 *.pyo
 
-# AI Compiler - 编译生成的网页（源码是 .txt）
+# AI Compiler - 编译生成的代码（源码是 .txt）
 *.html
+*.ino
 
-# API Key 缓存（安全网，正常情况下在 ~/.web-compiler-key）
+# API Key 缓存（安全网，正常在 ~/.everyone-coding-key）
+.everyone-coding-key
 .web-compiler-key
 
 # 操作系统

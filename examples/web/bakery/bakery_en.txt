@@ -1,0 +1,494 @@
+=== Page Structure and Navigation ===
+
+[Page 1: Home]
+Page Title: Home
+Background Color: #FFF8F0 (Cream)
+Page Padding: 24px all sides
+Primary Font Color: #5D4037 (Dark Brown)
+Fallback Font: Georgia, serif
+
+[Page 2: Menu]
+Page Title: Our Menu
+Background Color: #FFFEF9 (Off-white)
+Line Spacing: 16px
+
+[Page 3: About Us]
+Page Title: About Us
+Background Color: #F5F5F5 (Light Gray)
+
+[Page 4: Contact]
+Page Title: Contact Us
+Background Color: #FFFFFF (Pure White)
+
+=== Global Navigation Bar ===
+
+Fixed Top Navigation Bar
+Navigation Bar Height: 64px
+Navigation Bar Background: #D4A574 (Caramel), opacity 0.95
+Navigation Bar Shadow: 0 2px 8px rgba(0,0,0,0.15)
+Navigation Bar Padding: horizontal 16px
+
+Navigation Items (Left to Right):
+Item 1: Logo Image, height 40px, width auto, path: assets/logo.png, click goes to Page 1
+Item 2: Divider, height 24px, color #8B6914, width 1px, spacing 16px on each side
+Item 3: Text "Home", font size 16px, font weight 600, color white, hover color #FFF8F0, click goes to Page 1
+Item 4: Text "Menu", font size 16px, font weight 600, color white, hover color #FFF8F0, click goes to Page 2
+Item 5: Text "About Us", font size 16px, font weight 600, color white, hover color #FFF8F0, click goes to Page 3
+Item 6: Text "Contact", font size 16px, font weight 600, color white, hover color #FFF8F0, click goes to Page 4
+
+Mobile Menu:
+Breakpoint Width: 768px
+Below breakpoint: hide text navigation, show hamburger menu icon
+Hamburger Icon: three horizontal lines, each line height 3px, width 24px, line spacing 6px, color white
+Click hamburger icon: slide out side menu from right, width 280px, background #FFF8F0, animation duration 300ms
+
+=== Page 1: Home ===
+
+Hero Title:
+Text: Welcome to Xiao Wang's Bakery
+Font: 'Playfair Display', Georgia, serif
+Font Size: 48px (desktop), 32px (mobile)
+Font Weight: 700
+Color: #5D4037
+Text Align: center
+Margin Top: 80px
+Margin Bottom: 24px
+Text Shadow: 2px 2px 4px rgba(0,0,0,0.1)
+
+Subtitle:
+Text: Freshly Baked, Sweet Life
+Font: 'Open Sans', sans-serif
+Font Size: 24px (desktop), 18px (mobile)
+Font Weight: 400
+Color: #8B6914
+Text Align: center
+Margin Bottom: 48px
+
+Hero Image Section:
+Image Path: assets/hero-bakery.jpg
+Image Width: 100%
+Image Max Height: 500px (desktop), 300px (mobile)
+Image Object Fit: cover
+Gradient Overlay Below Image: transparent to rgba(255,248,240,0.8)
+Text Overlay on Image: hero title and subtitle
+
+First Introduction Paragraph:
+Text Content: Welcome to Xiao Wang's Bakery! We specialize in using premium ingredients and traditional techniques to bring you the most authentic baked goods. Freshly baked bread, cakes, and desserts every day make every day sweet and happy.
+Text Width: max 800px, centered
+Text Font Size: 18px
+Line Height: 1.8
+Color: #5D4037
+Margin Top: 40px
+Margin Bottom: 32px
+
+CTA Button Group (Center Aligned):
+Button 1 Style:
+Text: View Full Menu
+Background Color: #D4A574
+Text Color: white
+Font Size: 18px
+Font Weight: 600
+Padding: vertical 16px, horizontal 32px
+Border Radius: 8px
+Hover Effect: background changes to #C49566, translate up 2px, add shadow
+Click Action: navigate to Page 2 (Menu Page)
+Button Spacing: 16px
+
+Button 2 Style:
+Text: About Us
+Background Color: transparent
+Border: 2px solid #D4A574
+Text Color: #D4A574
+Other attributes same as above
+Click Action: navigate to Page 3 (About Us Page)
+
+Featured Products Section:
+Section Title: Popular Items
+Title Text: Popular Items
+Font: 'Playfair Display', serif
+Font Size: 32px
+Font Weight: 700
+Color: #5D4037
+Text Align: center
+Margin Bottom: 32px
+
+Product Card Grid:
+Grid Layout: 3 columns (desktop), 2 columns (tablet), 1 column (mobile)
+Column Gap: 24px
+Row Gap: 24px
+Card Padding: 16px
+
+Product Card 1:
+Card Background: white
+Border Radius: 12px
+Shadow: 0 4px 12px rgba(0,0,0,0.08)
+Hover Effect: translate up 4px, shadow intensifies
+Product Image: path assets/product1.jpg, width 100%, height 200px, object-fit cover, top border radius 12px
+Product Name: text Butter Cookies
+Font Size: 20px
+Font Weight: 600
+Color: #5D4037
+Margin Top: 16px
+Product Description: text Rich butter flavor, handmade, limited time offer
+Font Size: 14px
+Color: #8B7355
+Margin Top: 8px
+Product Price: text \$5.50
+Font Size: 24px
+Font Weight: 700
+Color: #D4A574
+Margin Top: 12px
+Add to Cart Button:
+Text: Add to Cart
+Background Color: #D4A574
+Text Color: white
+Font Size: 14px
+Padding: vertical 10px, horizontal 20px
+Border Radius: 6px
+Width: 100%
+Margin Top: 16px
+Hover Effect: background changes to #C49566
+
+Product Card 2:
+Product Image: path assets/product2.jpg
+Product Name: text Strawberry Cake
+Product Description: text Fresh strawberries, silky cream, perfect for celebrations
+Product Price: text \$18.50
+Other attributes same as Product Card 1
+
+Product Card 3:
+Product Image: path assets/product3.jpg
+Product Name: text French Baguette
+Product Description: text Crispy outside, soft inside, traditional recipe, fresh daily
+Product Price: text \$3.20
+Other attributes same as Product Card 1
+
+Footer Area:
+Background Color: #5D4037
+Padding: vertical 48px, horizontal 24px
+Content Max Width: 1200px, centered
+
+Footer Content Three Columns (desktop), stacked (mobile):
+Column 1: About Us
+Text: Xiao Wang's Bakery © 2024
+Text: Freshly baked, delivering happiness
+Font Size: 14px
+Color: #E8E0D5
+Line Height: 1.6
+
+Column 2: Quick Links
+Text: Home, Menu, About Us, Contact
+Font Size: 14px
+Color: #E8E0D5
+Line Height: 2
+Click each link to navigate to corresponding page
+
+Column 3: Follow Us
+Social Icon Row:
+Icon 1: WeChat icon, path assets/icon-wechat.png, size 24x24px, hover scale 1.1x
+Icon 2: Weibo icon, path assets/icon-weibo.png, size 24x24px
+Icon 3: Douyin icon, path assets/icon-douyin.png, size 24x24px
+Icon Spacing: 16px
+
+=== Page 2: Menu Page ===
+
+Page Hero Title:
+Text: Our Menu
+Font: 'Playfair Display', serif
+Font Size: 40px
+Font Weight: 700
+Color: #5D4037
+Text Align: center
+Margin Top: 120px (including nav bar)
+Margin Bottom: 48px
+
+Category Filter Bar:
+Filter Container: flex layout, horizontal center, spacing 12px
+Filter Style 1 (Default):
+Text: All Items
+Background Color: transparent
+Border: 2px solid #D4A574
+Text Color: #D4A574
+Padding: vertical 8px, horizontal 20px
+Border Radius: 20px
+Filter Style 2 (Active):
+Background Color: #D4A574
+Text Color: white
+Other attributes same as above
+Click Action: filter and display corresponding category products
+Filter Spacing: 12px
+
+Product List Grid:
+Grid Layout: 4 columns (desktop), 3 columns (tablet), 2 columns (mobile)
+Row Gap: 32px
+Column Gap: 24px
+
+Bread Products (Tag: Bread):
+Bread 1: French Baguette
+Image: assets/bread1.jpg
+Description: Classic French baguette, crispy outside soft inside
+Price: \$3.20
+Bread 2: Whole Wheat Toast
+Image: assets/bread2.jpg
+Description: Healthy whole wheat, soft and delicate
+Price: \$4.50
+Bread 3: Garlic Bread
+Image: assets/bread3.jpg
+Description: Rich garlic flavor, endless aftertaste
+Price: \$3.80
+Bread 4: Raisin Bread
+Image: assets/bread4.jpg
+Description: Added Turkish raisins
+Price: \$4.80
+
+Cake Products (Tag: Cakes):
+Cake 1: Strawberry Cream Cake
+Image: assets/cake1.jpg
+Description: Fresh strawberries with silky cream
+Price: \$22.00
+Cake 2: Chocolate Mousse
+Image: assets/cake2.jpg
+Description: Rich chocolate, silky texture
+Price: \$18.00
+Cake 3: Tiramisu
+Image: assets/cake3.jpg
+Description: Classic Italian dessert
+Price: \$14.00
+
+Dessert Products (Tag: Desserts):
+Dessert 1: Butter Cookies
+Image: assets/dessert1.jpg
+Description: Handmade butter cookies
+Price: \$5.50
+Dessert 2: Macarons
+Image: assets/dessert2.jpg
+Description: Delicate French pastries
+Price: \$7.00
+Dessert 3: Profiteroles
+Image: assets/dessert3.jpg
+Description: Crispy shell, cream filling
+Price: \$4.50
+
+General Product Card Style:
+Card Background: white
+Border Radius: 16px
+Shadow: 0 4px 16px rgba(0,0,0,0.1)
+Product Image Width: 100%
+Product Image Height: 180px
+Product Image Object Fit: cover
+Product Image Border Radius: top 16px
+Product Tag: top left corner badge, show category name
+Tag Background: rgba(212,165,116,0.9)
+Tag Text: white, font size 12px, padding 4px 8px
+Product Name: center, font size 18px, font weight 600, color #5D4037, margin 12px
+Product Description: center, font size 13px, color #8B7355, margin 8px
+Product Price: center, font size 22px, font weight 700, color #D4A574, margin 8px
+Add to Cart Button: same style as home page, width 100%
+
+Back to Top Button:
+Fixed Position: bottom right corner, 24px from edge
+Button Size: 48x48px
+Button Background: #D4A574
+Button Icon: up arrow, SVG path, size 24px, white
+Button Border Radius: circular
+Hover Effect: background changes to #C49566, scale 1.05x
+Click Action: smooth scroll to top of page, animation duration 500ms
+Display Condition: fade in when scroll position exceeds 300px
+
+=== Page 3: About Us ===
+
+Page Hero Title:
+Text: About Us
+Font: 'Playfair Display', serif
+Font Size: 40px
+Font Weight: 700
+Color: #5D4037
+Text Align: center
+Margin Top: 120px
+Margin Bottom: 48px
+
+Brand Story Section:
+Content Max Width: 900px, centered
+Image and Text Side by Side (desktop), stacked (mobile)
+Brand Image: path assets/our-story.jpg, width 50%, border radius 16px, shadow 0 4px 12px rgba(0,0,0,0.1)
+Right Text Area: width 50%, left padding 32px
+Subtitle: text Our Story
+Font Size: 28px, font weight 700, color #5D4037, margin bottom 16px
+Body Text: text Xiao Wang's Bakery was founded in 2015, growing from a small street shop to three locations today. We always insist on using the finest ingredients and handcrafting every product with care. Our founding vision is to let more people taste healthy, delicious, heartwarming baked goods.
+Font Size: 16px, line height 1.8, color #5D4037
+
+Core Values Section:
+Section Title: text Our Philosophy
+Alignment: center
+Margin Bottom: 32px
+Three Column Layout:
+Value 1:
+Icon: heart icon, path assets/icon-heart.png, size 48px, color #D4A574
+Title: text Handcrafted with Heart
+Description: text Every product is poured with our passion and dedication
+Value 2:
+Icon: leaf icon, path assets/icon-leaf.png, size 48px, color #D4A574
+Title: text Natural Ingredients
+Description: text Selected organic flour and fresh ingredients
+Value 3:
+Icon: star icon, path assets/icon-star.png, size 48px, color #D4A574
+Title: text Quality Guaranteed
+Description: text Strict quality control at every step
+
+Team Showcase Section:
+Section Title: text Meet Our Team
+Alignment: center
+Margin Bottom: 32px
+Team Member Cards Horizontal Layout, spacing 32px:
+Member 1:
+Avatar: path assets/team1.jpg, size 120px, circular
+Name: text Master Wang
+Position: text Head Baker
+Bio: text 20 years experience, specialist in French bread
+Member 2:
+Avatar: path assets/team2.jpg, size 120px, circular
+Name: text Master Li
+Position: text Cake Designer
+Bio: text Gold medal winner, National Baking Competition
+Member 3:
+Avatar: path assets/team3.jpg, size 120px, circular
+Name: text Master Zhang
+Position: text Pastry Chef
+Bio: text Focused on Italian pastry making
+
+Contact Us Card:
+Background Color: #F5F0E8
+Padding: 48px
+Border Radius: 16px
+Text: text Want to know more? Contact us now!
+Alignment: center
+Font Size: 24px, color #5D4037
+Margin Bottom: 24px
+Button: text Contact Us
+Style same as home page CTA button
+Click navigates to Page 4
+
+=== Page 4: Contact Us ===
+
+Page Hero Title:
+Text: Contact Us
+Font: 'Playfair Display', serif
+Font Size: 40px
+Font Weight: 700
+Color: #5D4037
+Text Align: center
+Margin Top: 120px
+Margin Bottom: 48px
+
+Contact Information Card:
+Max Width: 600px, centered
+Background: white
+Border Radius: 16px
+Shadow: 0 4px 20px rgba(0,0,0,0.1)
+Padding: 48px
+
+Contact Item 1: Address
+Icon: location icon, path assets/icon-location.png, size 24px, color #D4A574
+Text: 168 West Nanjing Road, Jing'an District, Shanghai
+Font Size: 16px, color #5D4037
+
+Contact Item 2: Phone
+Icon: phone icon, path assets/icon-phone.png, size 24px, color #D4A574
+Text: +86 21 8888 9999
+Font Size: 16px, color #5D4037
+Click Action: navigate to tel:+862188889999
+
+Contact Item 3: Email
+Icon: email icon, path assets/icon-email.png, size 24px, color #D4A574
+Text: contact@xiaowangbakery.com
+Font Size: 16px, color #5D4037
+Click Action: navigate to mailto:contact@xiaowangbakery.com
+
+Contact Item 4: Business Hours
+Icon: clock icon, path assets/icon-clock.png, size 24px, color #D4A574
+Text: Monday to Sunday 08:00-21:00
+Font Size: 16px, color #5D4037
+
+Each Contact Item Spacing: 24px
+Icon to Text Spacing: 16px
+Icon and Text Vertical Center Aligned
+
+Map Section:
+Map Image: path assets/map.jpg
+Width: 100%
+Height: 300px
+Border Radius: 16px
+Margin Top: 32px
+
+Contact Form Section:
+Form Title: text Send Us a Message
+Alignment: center
+Font Size: 24px, font weight 600, color #5D4037
+Margin Bottom: 24px
+
+Form Field 1: Name
+Label Text: Name
+Input Width: 100%
+Input Height: 48px
+Input Border: 1px solid #E0E0E0
+Input Border Radius: 8px
+Input Focus Border Color: #D4A574
+Input Padding: 0 16px
+Input Margin Bottom: 16px
+
+Form Field 2: Email
+Label Text: Email
+Input Style same as above
+
+Form Field 3: Phone
+Label Text: Phone (Optional)
+Input Style same as above
+
+Form Field 4: Message
+Label Text: Message
+Textarea Height: 150px
+Textarea Style same as input
+Textarea Resizable: vertical only
+
+Submit Button:
+Text: Submit Message
+Background Color: #D4A574
+Text Color: white
+Font Size: 18px
+Font Weight: 600
+Padding: vertical 14px, horizontal 32px
+Border Radius: 8px
+Width: 100%
+Margin Top: 24px
+Hover Effect: background changes to #C49566
+Click Action: show submission success modal popup
+Modal Style: centered modal, background white, border radius 16px, shadow 0 8px 32px rgba(0,0,0,0.2)
+Modal Content: text Message sent successfully! We will contact you soon.
+OK Button: text OK, click to close modal
+
+Social Media Section:
+Section Title: text Follow Us on Social Media
+Alignment: center
+Font Size: 20px, font weight 600, color #5D4037
+Margin Top: 48px
+Margin Bottom: 24px
+Social Link Buttons Horizontal Layout, spacing 16px:
+Weibo Button: text Weibo
+Background Color: #E6162D
+Click navigates to Weibo homepage
+
+WeChat Official Account:
+Text: WeChat
+Background Color: #07C160
+Click Action: show QR code modal popup
+QR Code Image: path assets/qrcode-wechat.jpg
+QR Code Size: 200x200px
+
+Back to Home Link:
+Text: ← Back to Home
+Font Size: 16px
+Color: #D4A574
+Margin Top: 48px
+Click navigates to Page 1
+Hover Effect: text underline
+
