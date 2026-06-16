@@ -2,9 +2,9 @@
 <img width="2560" height="1600" alt="d2080d5c426e96df07aa089871f1e58a" src="https://github.com/user-attachments/assets/606405a3-14fb-42f6-bd15-f60577a70474" />
 <div align="center">
 
-# 🚀 Everyone Coding
+# 🚀 Everyone Coding Coding Everyone
 
-**从自然语言到可运行代码 · 让编程成为所有人的超能力**
+**All you need is coding txt**
 
 <a href="https://platform.deepseek.com" target="_blank">
   <img src="https://img.shields.io/badge/API-DeepSeek-12B3A8?style=for-the-badge" alt="DeepSeek AI">
