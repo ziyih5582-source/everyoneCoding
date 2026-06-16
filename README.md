@@ -2,9 +2,10 @@
   <h1 align="center">Everyone Coding</h1>
   <p align="center"><strong>自然语言 → 可运行代码。没有编程语言，只有你的想法。</strong></p>
   <p align="center">
-    <img src="https://img.shields.io/badge/python-3.10+-blue" alt="Python">
-    <img src="https://img.shields.io/badge/llm-deepseek--v4-green" alt="LLM">
-    <img src="https://img.shields.io/badge/targets-web%20%7C%20arduino-orange" alt="Targets">
+
+<img width="2560" height="1600" alt="53abad8fde3cc2cc2bb0007903816a8f" src="https://github.com/user-attachments/assets/3303d043-5d4f-4d16-8961-344915fe376d" />
+<img width="2560" height="1600" alt="d2080d5c426e96df07aa089871f1e58a" src="https://github.com/user-attachments/assets/df0ca237-daae-483d-be8c-083821b7e7ee" />
+
   </p>
 </p>
 
