@@ -1,0 +1,212 @@
+/* ══════════════════════════════════════════════════════
+   Everyone Coding — VS Code 风格暗色主题
+   ══════════════════════════════════════════════════════ */
+
+:root {
+  --bg: #1e1e1e;
+  --bg-light: #252526;
+  --bg-lighter: #2d2d2d;
+  --border: #3e3e3e;
+  --text: #cccccc;
+  --text-muted: #858585;
+  --accent: #007acc;
+  --accent-hover: #1a8ad4;
+  --compile: #0e639c;
+  --compile-hover: #1177bb;
+  --error: #f44747;
+  --toolbar-height: 40px;
+  --statusbar-height: 24px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%; overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg); color: var(--text); font-size: 13px;
+}
+
+/* ═══════════════ 工具栏 ═══════════════ */
+#toolbar {
+  height: var(--toolbar-height);
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; padding: 0 12px;
+  gap: 12px; -webkit-app-region: drag;
+}
+.toolbar-left, .toolbar-center, .toolbar-right {
+  display: flex; align-items: center; gap: 8px;
+  -webkit-app-region: no-drag;
+}
+.toolbar-center { flex: 1; justify-content: center; }
+.app-title { font-weight: 700; font-size: 14px; color: #fff; letter-spacing: 0.5px; }
+.separator { color: var(--border); margin: 0 4px; }
+
+button {
+  background: var(--bg-lighter);
+  color: var(--text); border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 4px; cursor: pointer;
+  font-size: 12px; transition: all 0.15s;
+  white-space: nowrap;
+}
+button:hover { background: var(--border); }
+.btn-compile {
+  background: var(--compile); color: #fff; border: none;
+  padding: 5px 16px; font-weight: 600; font-size: 13px;
+}
+.btn-compile:hover { background: var(--compile-hover); }
+.btn-compile:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-compile.compiling { animation: pulse 1s infinite; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+select {
+  background: var(--bg-lighter); color: var(--text);
+  border: 1px solid var(--border); padding: 4px 8px;
+  border-radius: 4px; font-size: 12px; outline: none; cursor: pointer;
+}
+select:focus { border-color: var(--accent); }
+
+/* ═══════════════ 主体区域 ═══════════════ */
+#main-area {
+  display: flex;
+  height: calc(100vh - var(--toolbar-height) - var(--statusbar-height));
+}
+
+/* 编辑器面板 */
+#editor-pane {
+  flex: 1; display: flex; flex-direction: column;
+  min-width: 300px; border-right: 1px solid var(--border);
+}
+#editor-header {
+  height: 30px; background: var(--bg-lighter);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; padding: 0 12px;
+  font-size: 11px; color: var(--text-muted);
+}
+#editor-container { flex: 1; overflow: hidden; }
+
+/* 分隔条 */
+#resize-handle {
+  width: 4px; cursor: col-resize;
+  background: transparent; transition: background 0.15s; flex-shrink: 0;
+}
+#resize-handle:hover { background: var(--accent); }
+
+/* 输出面板 */
+#output-pane {
+  width: 45%; min-width: 250px; display: flex; flex-direction: column;
+  background: var(--bg);
+}
+#output-tabs {
+  height: 30px; background: var(--bg-lighter);
+  border-bottom: 1px solid var(--border);
+  display: flex; padding: 0 8px; gap: 0;
+}
+.output-tab {
+  background: none; border: none; color: var(--text-muted);
+  padding: 0 14px; font-size: 12px; cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+}
+.output-tab:hover { color: var(--text); }
+.output-tab.active {
+  color: #fff; border-bottom-color: var(--accent);
+}
+#output-content { flex: 1; overflow: hidden; position: relative; }
+.tab-panel { display: none; position: absolute; inset: 0; }
+.tab-panel.active { display: flex; flex-direction: column; }
+
+/* 预览占位 */
+#preview-placeholder {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  color: var(--text-muted);
+}
+.placeholder-icon { font-size: 48px; }
+.placeholder-text { font-size: 14px; }
+#preview-frame { flex: 1; border: none; display: none; background: #fff; }
+
+/* 代码视图 */
+#tab-code { overflow: hidden; }
+#code-view {
+  flex: 1; overflow: auto; padding: 12px;
+  font-family: 'Cascadia Code', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 13px; line-height: 1.6; white-space: pre; color: #d4d4d4;
+}
+.copy-btn {
+  position: absolute; top: 8px; right: 8px;
+  z-index: 10; font-size: 11px;
+}
+
+/* 日志 */
+#log-output {
+  padding: 12px; font-family: monospace; font-size: 12px;
+  color: var(--text-muted); white-space: pre-wrap;
+  overflow: auto; flex: 1;
+}
+
+/* ═══════════════ 状态栏 ═══════════════ */
+#statusbar {
+  height: var(--statusbar-height);
+  background: var(--accent);
+  color: #fff; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 12px;
+  font-size: 11px;
+}
+
+/* ═══════════════ 滚动条 ═══════════════ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* ═══════════════ 模态框 ═══════════════ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.modal-overlay.hidden { display: none; }
+.modal-box {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 32px;
+  width: 440px; max-width: 90vw;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+.modal-box h2 {
+  font-size: 18px; font-weight: 600;
+  margin-bottom: 12px; color: #fff;
+}
+.modal-desc {
+  font-size: 13px; color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.modal-desc a {
+  color: var(--accent); text-decoration: none;
+}
+.modal-desc a:hover { text-decoration: underline; }
+#apikey-input {
+  width: 100%; padding: 10px 14px;
+  background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 4px;
+  font-size: 14px; font-family: monospace;
+  outline: none; margin-bottom: 20px;
+}
+#apikey-input:focus { border-color: var(--accent); }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.btn-secondary {
+  background: transparent; color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 6px 16px; border-radius: 4px; cursor: pointer;
+  font-size: 12px;
+}
+.btn-secondary:hover { background: var(--border); color: var(--text); }
+.error-text {
+  color: var(--error); font-size: 12px;
+  margin-top: 12px; display: none;
+}
+.error-text.show { display: block; }

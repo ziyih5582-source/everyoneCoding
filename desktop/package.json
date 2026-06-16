@@ -1,0 +1,12 @@
+{
+  "name": "everyone-coding-desktop",
+  "version": "1.0.0",
+  "description": "Everyone Coding - AI Compiler Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^42.4.0"
+  }
+}
