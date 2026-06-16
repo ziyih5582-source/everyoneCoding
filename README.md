@@ -1,113 +1,192 @@
-<p align="center">
-  <h1 align="center">Everyone Coding</h1>
-  <p align="center"><strong>自然语言 → 可运行代码。没有编程语言，只有你的想法。</strong></p>
-  <p align="center">
+<div align="center">
 
-<img width="2560" height="1600" alt="53abad8fde3cc2cc2bb0007903816a8f" src="https://github.com/user-attachments/assets/3303d043-5d4f-4d16-8961-344915fe376d" />
-<img width="2560" height="1600" alt="d2080d5c426e96df07aa089871f1e58a" src="https://github.com/user-attachments/assets/df0ca237-daae-483d-be8c-083821b7e7ee" />
+# 🚀 Everyone Coding
 
-  </p>
-</p>
+**从自然语言到可运行代码 · 让编程成为所有人的超能力**
 
----
+<a href="https://platform.deepseek.com" target="_blank">
+  <img src="https://img.shields.io/badge/API-DeepSeek-12B3A8?style=for-the-badge" alt="DeepSeek AI">
+</a>
+<a href="https://github.com/ziyih5582-source/everyoneCoding" target="_blank">
+  <img src="https://img.shields.io/badge/Code-JavaScript%20|%20Python-007acc?style=for-the-badge" alt="Tech Stack">
+</a>
 
-## 这是什么？
+[快速开始](#-快速开始) • [工作原理](#-工作原理) • [示例](#-示例) • [贡献](#-贡献)
 
-**Everyone Coding** 是一个 AI 编译器。你用自然语言（中文/英文）写一个 `.txt` 文件描述你想要的东西，它帮你编译成真正能跑的代码。
-
-不需要学语法，不需要学框架。你只需要**精确地描述你要什么**。
-
-| 输入（.txt） | 输出 |
-| --- | --- |
-| "做一个烘焙店网站，有导航栏、商品卡片、联系表单" | 完整的 HTML 网页 |
-| "D13 的 LED 每隔 1 秒闪烁一次" | 可烧录的 Arduino .ino 代码 |
+</div>
 
 ---
 
-## 快速开始
+## ✨ 核心理念
+
+不用学语法，不用学框架，**只用说出你的想法**。
+
+> 💡 **一句话描述** → AI 编译器 → 🎯 完整可运行代码
+
+| 你的想法 | 输出结果 |
+|---------|--------|
+| "做一个烘焙店网站，有导航栏、商品卡片、购物车" | ✅ 完整 HTML + CSS |
+| "LED 每 1 秒闪烁一次，按钮控制开关" | ✅ Arduino .ino 代码 |
+| "用户登录表单，邮箱验证" | ✅ 前端 + 逻辑代码 |
+
+---
+
+## 🎯 快速开始
+
+### 1️⃣ 安装
 
 ```bash
-# 1. 安装依赖
+git clone https://github.com/ziyih5582-source/everyoneCoding.git
+cd everyoneCoding
 pip install openai
+```
 
-# 2. 编译
+### 2️⃣ 获取 API Key
+
+- 访问 [platform.deepseek.com](https://platform.deepseek.com)
+- 创建 API Key（首次运行时会提示保存）
+
+### 3️⃣ 编译你的第一个代码
+
+```bash
 python3 compiler.py examples/web/hello.txt --open
 ```
 
-首次运行会询问 DeepSeek API Key（在 [platform.deepseek.com](https://platform.deepseek.com) 获取），可选择保存，后续自动使用。
+✅ 浏览器自动打开生成的网页
 
 ---
 
-## 怎么工作
+## 🔧 工作原理
 
 ```
-┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  your_idea.txt  │ ──→ │  compiler.py │ ──→ │  output.html    │
-│  (自然语言描述)  │     │  + DeepSeek  │     │  / output.ino   │
-└─────────────────┘     └──────────────┘     └─────────────────┘
-        ↑                                            │
-        └──── 不满意？改 .txt 重新编译 ──────────────┘
+┌────────────────────┐
+│   你的想法.txt     │  用自然语言描述需求
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  通用编译引擎      │  + Skill 文件（领域知识）
+│  compiler.py       │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  DeepSeek AI       │  理解 + 生成代码
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│  output.html       │  ✅ 可直接运行
+│  output.ino        │
+└────────────────────┘
 ```
 
-编译器将你的输入 + 目标领域的 Skill 文件（包含领域知识和编译规则）一起发给 DeepSeek，AI 返回完整代码。
+**关键特性：**
+- 🎨 编译器是**通用引擎**，零领域特定代码
+- 📚 每个领域由一个 **Skill 文件** 定义
+- ♻️ 不满意？改 `.txt` 重新编译，无限迭代
 
 ---
 
-## Skill 系统
+## 📦 支持的 Skill（编译目标）
 
-每个编译目标都是一个 **Skill 文件**（`skills/*.md`）。编译器是纯通用引擎——它扫描 `skills/` 目录发现可用目标，不加任何领域特定代码。
+### 🌐 web — 网页制作
 
-| 命令 | 作用 |
-| --- | --- |
-| `python3 compiler.py --list` | 列出所有 Skill |
-| `python3 compiler.py --grammar` | 查看默认 Skill 的领域知识 |
-| `python3 compiler.py 文件.txt --target arduino` | 用指定 Skill 编译 |
-
-每次编译时，对应 Skill 文件的**整个正文**直接作为 AI 的 system prompt。
-
-**加一个新目标只需要创建一个 Skill 文件。** 编译器代码零改动。
-
----
-
-## 已支持的 Skill
-
-### web — 网页制作
-
-用直觉式的关键词描述网页元素。完整的语法参考见 [`skills/web.md`](skills/web.md)。
+用直观的关键词或纯自然语言描述页面：
 
 ```txt
-PAGE "我的主页"
-COLOR background: #f5f5f5
+PAGE "烘焙店主页"
+COLOR background: #fffbf0
 
-TITLE "你好！"
-TEXT "欢迎来到我用 AI 编译器创建的网页。"
-BUTTON "点我试试" (bg:blue, color:white, round)
+HEADER (sticky, shadow)
+  LOGO "🍪 Sweet Bakery"
+  NAV "首页" "菜单" "预订" "联系"
+
+SECTION "特色产品"
+  CARD "法式牛角包" (img, price: ¥25)
+  CARD "巧克力蛋糕" (img, price: ¥68)
+
+FORM "在线预订" (name, email, date, submit)
 ```
 
-也支持完全自由的纯自然语言描述——参考 [`examples/web/bakery/bakery_cn.txt`](examples/web/bakery/bakery_cn.txt)，一份 494 行的中文描述被编译成了 1900 行的精美烘焙店网站。
+**输出：** 响应式 HTML5 + 现代 CSS + 交互效果
 
-### arduino — 嵌入式开发
+→ 查看完整语法：[`skills/web.md`](skills/web.md)
 
-纯自然语言描述硬件行为，无需学习 C++ 或 Arduino API。领域知识参考见 [`skills/arduino.md`](skills/arduino.md)。
+### 🤖 arduino — 嵌入式开发
+
+纯自然语言控制硬件，无需学 C++：
 
 ```txt
-让开发板上的 LED（D13）每隔 1 秒闪烁一次。亮 1 秒，灭 1 秒，一直循环。
+LED（D13）每隔 1 秒闪烁一次，亮 1 秒灭 1 秒。
 ```
 
-覆盖：GPIO、模拟传感器、PWM、舵机、超声波测距、LCD 显示屏、继电器等。
+**支持的硬件：**
+- GPIO 控制 • 模拟传感器 • PWM
+- 舵机 • 超声波测距 • LCD 屏幕 • 继电器
+- 温度 / 湿度 / 运动检测
+
+→ 查看完整文档：[`skills/arduino.md`](skills/arduino.md)
 
 ```bash
 python3 compiler.py examples/arduino/auto_watering.txt --target arduino
-# → 生成自动浇花系统的完整 .ino 代码
+# → 自动浇花系统完整代码
 ```
 
 ---
 
-## 添加新 Skill
+## 🎮 常用命令
 
-创建一个 `skills/<name>.md` 文件：
+```bash
+# 列出所有可用 Skill
+python3 compiler.py --list
 
-```yaml
+# 查看 web Skill 的领域知识
+python3 compiler.py --grammar
+
+# 编译指定 Skill
+python3 compiler.py input.txt --target arduino
+
+# 编译后自动打开（web 默认行为）
+python3 compiler.py input.txt --open
+
+# 指定输出文件名
+python3 compiler.py input.txt -o my_output.html
+```
+
+---
+
+## 📂 项目结构
+
+```
+everyoneCoding/
+├── 🔧 compiler.py              # 通用编译引擎（所有 Skill 共用）
+├── 📚 skills/
+│   ├── web.md                  # Web 网页编译规则 + 语法
+│   └── arduino.md              # Arduino 嵌入式编译规则
+├── 📝 examples/
+│   ├── web/
+│   │   ├── hello.txt           # 简单示例
+│   │   ├── landing.txt         # 落地页
+│   │   └── bakery/
+│   │       └── bakery_cn.txt   # 完整案例（494行 → 1900行代码）
+│   └── arduino/
+│       ├── blink.txt           # LED 闪烁
+│       ├── button_led.txt      # 按钮控制
+│       └── auto_watering.txt   # 自动浇花系统
+└── README.md
+```
+
+---
+
+## 🚀 添加新 Skill（扩展新领域）
+
+**只需 3 步：**
+
+1. 创建文件 `skills/my_skill.md`
+2. 写入 Skill 定义：
+
+```markdown
 ---
 name: game
 display: 2D 小游戏
@@ -115,57 +194,67 @@ ext: .html
 open: true
 ---
 
-You are an AI Game Compiler. Your task is to...
+You are an AI Game Compiler...
 
 === GAME ENGINE KNOWLEDGE ===
-...
+[领域知识内容]
 ```
 
-运行 `python3 compiler.py --list` 即可看到新目标。
+3. 运行 `python3 compiler.py --list` 立即看到新目标！
+
+✨ **编译器代码零改动** — Skill 系统完全解耦
 
 ---
 
-## 项目结构
+## 💡 设计哲学
 
-```
-everyoneCoding/
-├── compiler.py              # 通用编译器引擎
-├── skills/                  # Skill 目录（加新领域只加这里）
-│   ├── web.md
-│   └── arduino.md
-├── examples/                # 示例输入
-│   ├── web/
-│   │   ├── hello.txt
-│   │   ├── landing.txt
-│   │   ├── bakery.txt
-│   │   └── bakery/          # 纯自然语言案例
-│   └── arduino/
-│       ├── blink.txt
-│       ├── button_led.txt
-│       └── auto_watering.txt
-└── README.md
-```
+| 原则 | 含义 |
+|------|------|
+| **一行一意图** | 每句话对应一个输出，AI 不会隐藏修改 |
+| **语法是建议** | 写得不精确也能工作，AI 推断意思 |
+| **迭代即编译** | 改 `.txt` → 重新运行 → 看结果（不需懂代码） |
+| **Skill 即扩展** | 新领域 = 一个新文件，与引擎完全独立 |
 
 ---
 
-## 设计理念
+## 🛠 技术栈
 
-1. **一行一个意图。** 每句话对应一个具体的输出，AI 不会在你看不到的地方添加或遗漏东西。
-
-2. **语法是建议，不是规则。** 写得不精确也能工作——AI 会推断你的意思。
-
-3. **迭代即编译。** 不满意就改 `.txt`，重新运行。不需要懂目标代码。
-
-4. **Skill 即扩展。** 每个领域一个 Skill 文件。社区可以贡献新的 Skill，与编译器本体完全解耦。
+- **前端编译**：JavaScript (53.3%) + CSS (18.4%)
+- **后端编译**：Python (28.3%)
+- **AI 引擎**：[DeepSeek](https://www.deepseek.com)
 
 ---
 
-## 要求
+## 📋 系统要求
 
 - Python 3.10+
 - `pip install openai`
-- [DeepSeek API Key](https://platform.deepseek.com)
+- DeepSeek API Key（免费注册）
 
 ---
 
-<p align="center"><em>编程不应是少数人的特权。每个人都有一个值得被实现的想法。</em></p>
+## 🤝 贡献
+
+我们欢迎新的 Skill 和示例！
+
+1. Fork 本仓库
+2. 创建新分支：`git checkout -b add-skill-gaming`
+3. 提交 Pull Request
+
+---
+
+## 📄 许可证
+
+MIT
+
+---
+
+<div align="center">
+
+### 🎓 编程不应是少数人的特权
+
+**每个人都有值得被实现的想法**
+
+[⭐ 给个 Star](https://github.com/ziyih5582-source/everyoneCoding) · [📧 反馈](https://github.com/ziyih5582-source/everyoneCoding/issues)
+
+</div>
