@@ -70,7 +70,7 @@ ipcMain.handle('compile', async (_event, { content, target, ext }) => {
     const compiler = path.join(PROJECT_ROOT, 'compiler.py');
     const args = [compiler, inputPath, '--target', target, '-o', outputPath];
 
-    execFile('python3', args, { timeout: 120000 }, (err, stdout, stderr) => {
+    execFile('python3', args, { timeout: 640000 }, (err, stdout, stderr) => {
       if (err) {
         if (err.killed) {
           resolve({ error: '编译超时（超过 120 秒）。请重试，或简化描述内容。' });
